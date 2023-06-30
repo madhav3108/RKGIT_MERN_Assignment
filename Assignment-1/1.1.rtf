@@ -1,0 +1,41 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1.Write a JavaScript program to display the current day and time in the following format.\
+Today is : wednesday.\
+Current time is : 10 PM : 30 : 38\
+\
+======================================\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs29\fsmilli14667 \cf0 \expnd0\expndtw0\kerning0
+function GetDay()\{\
+\'a0\'a0\'a0 const days=["Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday","Sunnday"];\
+\'a0\'a0\'a0 const d=new Date();var h;\
+\'a0\'a0\'a0 const h1=d.getHours();\
+\'a0\'a0\'a0 if(h1<12)\
+\'a0\'a0\'a0 \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 h=h1+"AM";\
+\'a0\'a0\'a0 \} else if(h1==12)\{\
+\pard\pardeftab720\li720\fi-720\partightenfactor0
+\cf0 h=12+"pm";\
+\}\
+\pard\pardeftab720\partightenfactor0
+\cf0 \'a0\'a0\'a0 else\
+\'a0\'a0\'a0 \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0 h=h1-12+"PM";\
+\'a0\'a0\'a0 \}\
+\'a0\'a0\'a0 var m=d.getMinutes();\
+\'a0\'a0\'a0 var s=d.getSeconds();\
+\'a0\'a0\'a0\'a0 console.log("Today is :"+days[d.getDay()-1]);\
+\'a0\'a0\'a0 console.log("Current time is :"+h + ":"+\'a0 m + ":"+ s);\
+\}\
+\
+console.log(GetDay());\
+VM5303:17 Today is :Saturday\
+VM5303:18 Current time is :2AM:2:34}
